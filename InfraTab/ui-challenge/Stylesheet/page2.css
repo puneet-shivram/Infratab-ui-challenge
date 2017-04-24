@@ -1,0 +1,205 @@
+input[type=checkbox].check-cell:checked,
+input[type=checkbox].check-cell:not(:checked){
+  position:absolute;
+  top:-9999px;
+  left:-9999px;
+}
+
+input[type=checkbox].check-cell:checked+label.custom-checkbox,
+input[type=checkbox].check-cell:not(:checked)+label.custom-checkbox{
+  position:relative;
+  padding-left:20px;
+  cursor:pointer;
+}
+
+input[type=checkbox].check-cell:checked+label.custom-checkbox:before,
+input[type=checkbox].check-cell:not(:checked)+label.custom-checkbox:before{
+   position: absolute;
+    content: '';
+    padding-left: 10px;
+    padding-top: 3px;
+    width: 60px;
+    height: 28px;
+    left: -5px;
+    background: #00c29e;
+    border-radius: 3px;
+}
+
+input[type="checkbox"].check-cell:checked+label.custom-checkbox:after,
+input[type="checkbox"].check-cell:not(:checked)+label.custom-checkbox:after{
+    content: '';
+    position: absolute;
+    left: 38px;
+    width: 20px;
+    height: 20px;
+    background: #000;
+    top: 4px;
+    color: lightseagreen;
+    transition: all .2s;
+}
+
+input[type="checkbox"].check-cell:not(:checked)+label.custom-checkbox:after{
+  opacity:1;
+  right: 20px;
+}
+
+input[type="checkbox"].check-cell:checked+label.custom-checkbox:after{
+  opacity:1;
+  left:0;
+}
+
+input[type="checkbox"].check-cell:checked + label:before{
+  content:'';
+  background:lightgreen;
+  position: absolute;
+  left: 0;
+}
+
+
+.toggle-text{
+  position: relative;
+  font-size:13px;
+  color:#fff;
+  top:4px;
+  left: 0px;
+}
+
+.toggle-text.text1{
+  left:-15px;
+}
+.form-wrapper {
+    height: 200px;
+    width: 100% !important;
+    display: block;
+    text-align: center;
+}
+
+
+
+.content-list-timeline-wrapper {
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-list-timeline {
+    width: 10%;
+    height: 100%;
+    position: relative;
+}
+
+.content-list-timeline:after {
+    content: '';
+    width: calc(100% - 20px);
+    height: 2px;
+    background: red;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 20px;
+    margin: auto;
+}
+
+.timeline-icon {
+    width: 20px;
+    height: 20px;
+    float: left;
+    background: red;
+    border-radius: 50%;
+    margin-top: 14px;
+    position: relative;
+    z-index: 9;
+    transition: all .2s ease;
+}
+
+
+
+.timeline-icon.active{
+    transform: scale(1.85);
+}
+
+.content-list-timeline:last-child:after {
+    display: none
+}
+
+.content-list-timeline:last-child {
+    width: 20px;
+}
+
+
+#list1:after{
+    background: orange
+}
+#list1:before,
+#list2:before,
+#list3:before,
+#list4:before,
+#list5:before{
+    content: 'Button 1';
+    position: absolute;
+    bottom: -40px;
+    left: -17px;
+}
+#list2:before{
+    content: 'Button 2'
+}
+#list3:before{
+    content: 'Button 3'
+}#list4:before{
+    content: 'Button 4'
+}#list5:before{
+    content: 'Button 5';
+    width: 60px;
+}
+
+
+#list2:after{
+    background: #7efbff;
+}
+
+
+
+#list3:after {
+    background: #00d0de
+}
+
+
+#list4:after {
+    border: 1px dashed grey;
+    background: transparent;
+    height: 0;
+}
+
+#list-item1 {
+        background: orange
+}
+
+#list-item2 {
+    background: #7efbff;
+}
+
+#list-item3 {
+     background: #00d0de
+}
+
+#list-item4 {
+     background: #208def;
+}
+
+#list-item5 {
+    border: 2px dashed grey;
+    background: #ebf0f1;
+}
+
+.timeline-icon:hover {
+    transform: scale(1.85);
+}
+
+.active-last {
+    transform: scale(1.85);
+    width: 10px !important;
+    height: 10px !important;
+}
